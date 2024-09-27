@@ -34,7 +34,7 @@ cmake ..
 make -j8
 #Do not use "make install"
 ```
-Note, the OpenCV version must be larger than 4.3.0 (i.e. the newest version is 4.10.0, which is work well in our project). Otherwise, some of the function may not work well.
+Note, the OpenCV version must be larger than 4.3.0 (the newest version is 4.10.0, which is work well in our project). Otherwise, some of the function may not work well.
 
 Then build the package with:
 ```
