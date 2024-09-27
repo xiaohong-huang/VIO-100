@@ -79,7 +79,7 @@ my_config.yaml          #Our dataset
 
 
 ## 4. Acknowledgements
-The VIO framework is developed from [VINS-Mono](https://github.com/HKUST-Aerial-Robotics/VINS-Mono). The Dogleg solving strategy is developed base on [Ceres-Solver](http://ceres-solver.org/). The packages for interfacing ROS with OpenCV is forked from [ros-perception](https://github.com/ros-perception/vision_opencv/tree/noetic.git). 
+The VIO framework is developed from [VINS-Mono](https://github.com/HKUST-Aerial-Robotics/VINS-Mono). The Dogleg solving strategy is developed base on [Ceres-Solver](http://ceres-solver.org/). The packages for interfacing ROS with OpenCV is forked from [ros-perception](https://github.com/ros-perception/vision_opencv). 
 
 The version with code comments will be uploaded in the future.
 
