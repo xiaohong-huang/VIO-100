@@ -50,7 +50,9 @@ Download the TUM-VI (512x512) Bag [Dataset](https://cvg.cit.tum.de/data/datasets
 
 Download Our [Dataset](https://1drv.ms/f/s!ApdCy_pJvU0qyVsLB906CNjAEQiH).
 
-Download the 4Seasons [Dataset](https://github.com/lukasvst/dm-vio-python-tools/blob/master/download_4seasons.py).
+Download the 4Seasons [Dataset](https://github.com/lukasvst/dm-vio-python-tools/blob/master/download_4seasons.py) and follow the instructions in [4seasons_bag_generate](https://github.com/xiaohong-huang/VIO-100/blob/main/4seasons_bag_generate) to generate the ROS bag format.
+
+
 
 
 
