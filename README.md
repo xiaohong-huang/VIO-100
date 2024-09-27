@@ -46,11 +46,11 @@ catkin_make
 ## 3. Run VIO-100 with EuRoC, TUM-VI, 4Seasons and Our dataset
 Download the EuRoC bag [Dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets).
 
-Download the TUM-VI (512x512) Bag [Dataset](https://cvg.cit.tum.de/data/datasets/visual-inertial-dataset). 
+Download the TUM-VI (512x512) bag [Dataset](https://cvg.cit.tum.de/data/datasets/visual-inertial-dataset). 
 
-Download Our [Dataset](https://1drv.ms/f/s!ApdCy_pJvU0qyVsLB906CNjAEQiH).
+Download Our bag [Dataset](https://1drv.ms/f/s!ApdCy_pJvU0qyVsLB906CNjAEQiH).
 
-Download the 4Seasons Dataset using the [dm-vio-python-tools](https://github.com/lukasvst/dm-vio-python-tools) and follow the instructions in [4seasons_bag_generate](https://github.com/xiaohong-huang/VIO-100/blob/main/4seasons_bag_generate) to generate the ROS bag format.
+Download the 4Seasons Dataset using the [dm-vio-python-tools](https://github.com/lukasvst/dm-vio-python-tools) and follow the instructions in [4seasons_bag_generate](https://github.com/xiaohong-huang/VIO-100/blob/main/4seasons_bag_generate) to generate the ROS bag.
 
 
 
