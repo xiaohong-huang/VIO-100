@@ -75,5 +75,6 @@ target_link_libraries(vio_100_lib ${OpenCV_LIBS} ${catkin_LIBRARIES} )
 add_executable(vio_100_node src/main3.cpp)
 target_link_libraries(vio_100_node vio_100_lib) 
 
-
+add_executable(4seasons_convert2bag_node src/4seasons_convert2bag.cpp)
+target_link_libraries(4seasons_convert2bag_node vio_100_lib) 
 
