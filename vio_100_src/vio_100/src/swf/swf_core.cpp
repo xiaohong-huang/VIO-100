@@ -11,21 +11,21 @@ inline void SWFOptimization::AddFeatures(FeaturePerId& it_per_id, std::vector<Vi
     int imu_j = it_per_id.start_frame - 1;
     int imu_i = it_per_id.start_frame ;
 
-    //是否为跨块的特征点
+
     bool is_cross = (it_per_id.start_frame / SWF_SIZE_IN != (it_per_id.endFrame() - 1) / SWF_SIZE_IN)
                     || (idepths_all[0].find(it_per_id.feature_id) != idepths_all[0].end() && last_marg_info->keep_block_addr_set.find(&idepths_all[0][it_per_id.feature_id]) != last_marg_info->keep_block_addr_set.end());
-    //如果是跨块的特征点，将特征点的参考帧设置为边界帧
+
     if ( is_cross && it_per_id.start_frame % SWF_SIZE_IN != 0) {
         imu_i = (imu_i / SWF_SIZE_IN + 1) * SWF_SIZE_IN;
         if (factor_index_set.find(imu_i / SWF_SIZE_IN - 1) != factor_index_set.end()) {
-            //标识特征点不能被factor_index因子边缘化
+
             visual_inertial_bases[imu_i / SWF_SIZE_IN - 1]->deliver_idepth_pointer[&idepths_all[imu_i / SWF_SIZE_IN][it_per_id.feature_id]] = 0;
         }
     }
     int factor_index = imu_i / SWF_SIZE_IN;
 
     ASSERT(idepths_all[it_per_id.start_frame / SWF_SIZE_IN][it_per_id.feature_id] != 0);
-    //如果是相邻跨块的特征点，则将特征点视为非跨块的
+
     if (imu_i != 0 && (is_cross && (it_per_id.endFrame() - imu_i) <= LEAK_NUM)) {
         is_cross = false;
         factor_index -= 1;
@@ -36,7 +36,7 @@ inline void SWFOptimization::AddFeatures(FeaturePerId& it_per_id, std::vector<Vi
     for (auto& it_per_frame : it_per_id.feature_per_frame) {
         imu_j++;
         if (imu_i == imu_j)continue;
-        //跨块特征点改变参考帧
+
         if (imu_j - 1 == (imu_i / SWF_SIZE_IN + 1)*SWF_SIZE_IN) {
             ASSERT(is_cross);
 
@@ -73,7 +73,7 @@ inline void SWFOptimization::AddFeatures(FeaturePerId& it_per_id, std::vector<Vi
         }
         ASSERT(idepth_pointer[0] != 0);
 
-        //非跨块特征点
+
         if (!is_cross) {
             if (factor_index_set.find(factor_index) == factor_index_set.end())continue;
             std::vector<double*>parameters{para_pose[imu_i], para_pose[imu_j], idepth_pointer};
@@ -96,7 +96,7 @@ inline void SWFOptimization::AddFeatures(FeaturePerId& it_per_id, std::vector<Vi
                                                                      );
 
         } else {
-            //跨块特征点
+
             int factor_index = (imu_j - 1) / SWF_SIZE_IN;
             if (factor_index_set.find(factor_index) == factor_index_set.end())continue;
 
@@ -120,7 +120,7 @@ inline void SWFOptimization::AddFeatures(FeaturePerId& it_per_id, std::vector<Vi
 
 void SWFOptimization::AddFactors(std::vector<VisualInertialBase*>& visual_inertial_bases, std::set<int>factor_index_set) {
 
-    //添加IMU因子
+
     for (int j = 1; j < image_count; j++) {
         int factor_index = (j - 1) / SWF_SIZE_IN;
         if (factor_index_set.find(factor_index) == factor_index_set.end())continue;
@@ -146,14 +146,14 @@ void SWFOptimization::AddFactors(std::vector<VisualInertialBase*>& visual_inerti
         imu_pre_factor->parameters = parameters;
         visual_inertial_bases[factor_index]->AddIMUFactor(imu_pre_factor);
     }
-    //添加视觉因子
+
     for (auto& it_per_id : f_manager.feature) {
         if (!it_per_id.valid)continue;
         AddFeatures(it_per_id, visual_inertial_bases, factor_index_set);
     }
 
 }
-//添加全局因子，全局因子会被反复利用
+
 void SWFOptimization::UpdataGlobalFactors() {
 
     int max_factor_num = (image_count - 2) / SWF_SIZE_IN - 2;
