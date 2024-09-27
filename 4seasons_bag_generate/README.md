@@ -1,4 +1,4 @@
-# VIO-100 RUN ALL
+# Gererating ROS bag for 4Seasons dataset
 
 
 
