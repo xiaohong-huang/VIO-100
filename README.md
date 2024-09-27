@@ -75,7 +75,7 @@ tum_config.yaml         #TUM-VI dataset
 my_config.yaml          #Our dataset
 4seasons_config         #4Seasons dataset
 ```
-<!-- We have also provide demos for runing and evaluating with all the datasets (see [run.py](https://github.com/xiaohong-huang/VIO-100/blob/main/run_evaluate_all/run.py) and [evaluate.py](https://github.com/xiaohong-huang/VIO-100/blob/main/run_evaluate_all/evaluate.py)).  -->
+ We have also provide demos for runing and evaluating with all the datasets (see [run_evaluate_all](https://github.com/xiaohong-huang/VIO-100/blob/main/run_evaluate_all)).  
 
 
 ## 4. Acknowledgements
