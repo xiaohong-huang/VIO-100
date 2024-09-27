@@ -43,8 +43,8 @@ catkin_make
 ```
 
 
-## 3. Run VIO-100 with EUROC, TUM-VI and Our dataset
-Download the EUROC bag [Dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets).
+## 3. Run VIO-100 with EuRoC, TUM-VI, 4Seasons and Our dataset
+Download the EuRoC bag [Dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets).
 
 Download the TUM-VI (512x512) Bag [Dataset](https://cvg.cit.tum.de/data/datasets/visual-inertial-dataset). 
 
@@ -72,7 +72,7 @@ SETTING.yaml is the setting for different datasets.
 
 You could use the following settings to perform VIO in different datasets.
 ```
-euroc_config.yaml       #EUROC dataset
+euroc_config.yaml       #EuRoC dataset
 tum_config.yaml         #TUM-VI dataset
 my_config.yaml          #Our dataset
 4seasons_config         #4Seasons dataset
