@@ -2,9 +2,9 @@
 
 
 
-### 1 Step 1
+###  Step 1
 In 4seasons_bag_generate.py, you may need to change the "folder" to be the folder names of the 4seasons dataset.
-### 1 Step 2
+###  Step 2
 Run with all datasets:
 ```
 cd ~/catkin_ws/
