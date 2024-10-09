@@ -8,7 +8,7 @@
 This package requires some features of C++14.
 
 ### 1.2 ROS
-This package is developed and tested under [ROS Melodic (Ubuntu 18.04)](http://wiki.ros.org/melodic) or [ROS Noetic (Ubuntu 20.04)](http://wiki.ros.org/noetic) environment.
+This package is developed and tested under [ROS Melodic (Ubuntu 18.04)](http://wiki.ros.org/melodic) and [ROS Noetic (Ubuntu 20.04)](http://wiki.ros.org/noetic) environment.
 
 
 ## 2. Build VIO-100
