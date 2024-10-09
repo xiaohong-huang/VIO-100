@@ -1,4 +1,4 @@
-# Gererating ROS bag for 4Seasons dataset
+# Gererating ROS bag of the 4Seasons dataset
 
 
 
