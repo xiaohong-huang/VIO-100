@@ -75,7 +75,7 @@ You could use the following settings to perform VIO in different datasets.
 euroc_config.yaml       #EuRoC dataset
 tum_config.yaml         #TUM-VI dataset
 my_config.yaml          #Our dataset
-4seasons_config.yaml         #4Seasons dataset
+4seasons_config.yaml    #4Seasons dataset
 ```
  We have also provide demos for runing and evaluating with all the datasets (see [run_evaluate_all](https://github.com/xiaohong-huang/VIO-100/blob/main/run_evaluate_all)).  
 
